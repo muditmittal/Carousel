@@ -12,8 +12,10 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var parentSpinButton: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+            parentSpinButton.hidden = true
             scrollView.delegate = self
             scrollView.contentSize = CGSize(width:1280, height:568)
     }
@@ -27,8 +29,18 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         let page : Int = Int(round(scrollView.contentOffset.x / 320))
         pageControl.currentPage = page
         
+        if page == 3 {
+            pageControl.hidden = true
+            parentSpinButton.hidden = false
+        } else {
+            pageControl.hidden = false
+            parentSpinButton.hidden = true
+        }
+        
     }
     
+    @IBAction func onButton(sender: AnyObject) {
+    }
     /*
     // MARK: - Navigation
 

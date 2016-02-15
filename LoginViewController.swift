@@ -16,7 +16,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     var buttonOffset: CGFloat!
     
     @IBOutlet weak var scrollView: UIScrollView!
-
     @IBOutlet weak var loginNavBar: UIImageView!
     @IBOutlet weak var buttonParentView: UIView!
     @IBOutlet weak var fieldParentView: UIView!
@@ -77,40 +76,27 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         view.endEditing(true)
     }
     
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     @IBAction func backButton(sender: AnyObject) {
         navigationController?.popToRootViewControllerAnimated(true)
     }
 
     @IBAction func signinButton(sender: AnyObject) {
         loginIndicator.startAnimating()
-        loginButton.selected = true
         if emailField.text == "e" && passwordField.text == "p" {
-            print("PERFECT MATCH")
-            self.loginIndicator.startAnimating()
-            print("fields match")
-            delay(1, closure: { () -> () in
+            delay(2, closure: { () -> () in
                 self.loginIndicator.stopAnimating()
-                self.performSegueWithIdentifier("welcomeSegue", sender: nil)
+                self.performSegueWithIdentifier("signinSegue", sender: nil)
             })
         } else if emailField.text!.isEmpty || passwordField.text!.isEmpty {
-            print("EMPTY FIELDS")
-            let alertController  = UIAlertController(title: "Missing details", message: "Both email and password are required.", preferredStyle: .Alert)
-            let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+            let alertController = UIAlertController(title: "Missing details", message: "Both email and password are required.", preferredStyle: .Alert)
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
             }
-            alertController.addAction(cancelAction)
-            presentViewController(alertController, animated: true){
+            alertController.addAction(OKAction)
+            presentViewController(alertController, animated: true) {
             }
-
+            self.loginIndicator.stopAnimating()
         } else {
-            print("DO NOT MATCH")
-                self.loginIndicator.startAnimating()
-                delay(1, closure: { () -> () in
+                delay(2, closure: { () -> () in
                 self.loginIndicator.stopAnimating()
                 let alertController = UIAlertController(title: "Login Error", message: "Please enter your email and password details again.", preferredStyle: .Alert)
                 let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
@@ -119,29 +105,27 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
                 self.presentViewController(alertController, animated: true) {
                 }
             })
- 
         }
     }
 
-
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        // This method is called as the user scrolls
         if scrollView.contentOffset.y <= -50 {
-            // Hide the keyboard
             view.endEditing(true)
-        }    }
+        }
+    }
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        
     }
     
     func scrollViewDidEndDragging(scrollView: UIScrollView,
         willDecelerate decelerate: Bool) {
-            // This method is called right as the user lifts their finger
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        // This method is called when the scrollview finally stops scrolling.
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
 }
