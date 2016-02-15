@@ -22,3 +22,4 @@ Optional: Upon reaching the 4th page, hide the dots and show the "Take Carousel 
 
 Demo:
 ![Carousel Demo](http://cdn.makeagif.com/media/2-15-2016/rfU3sZ.gif)
+Carousel/Carousel_Demo.gif
