@@ -23,3 +23,4 @@ Optional: Upon reaching the 4th page, hide the dots and show the "Take Carousel 
 Demo Gif Link: http://giphy.com/gifs/xT0BKs42kdYZTkeL0k
 
 ![Carousel Demo] (http://giphy.com/gifs/xT0BKs42kdYZTkeL0k)
+(/Carousel_Demo.gif)
