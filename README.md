@@ -21,5 +21,4 @@ Optional: User can page between the Welcome screens with updated dots
 Optional: Upon reaching the 4th page, hide the dots and show the "Take Carousel for a Spin" button.
 
 Demo:
-http://giphy.com/gifs/xT0BKs42kdYZTkeL0k
-![Carousel Demo](http://cdn.makeagif.com/media/2-15-2016/rfU3sZ.gif)
+![Carousel Demo] http://giphy.com/gifs/xT0BKs42kdYZTkeL0k
