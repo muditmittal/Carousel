@@ -20,5 +20,5 @@ Optional: User is taken to the tutorial screens upon tapping the "Create a Dropb
 Optional: User can page between the Welcome screens with updated dots
 Optional: Upon reaching the 4th page, hide the dots and show the "Take Carousel for a Spin" button.
 
-Demo:
-![Carousel Demo] http://giphy.com/gifs/xT0BKs42kdYZTkeL0k
+
+![Carousel Demo] (http://giphy.com/gifs/xT0BKs42kdYZTkeL0k)
