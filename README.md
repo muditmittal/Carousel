@@ -20,7 +20,7 @@ Optional: User is taken to the tutorial screens upon tapping the "Create a Dropb
 Optional: User can page between the Welcome screens with updated dots
 Optional: Upon reaching the 4th page, hide the dots and show the "Take Carousel for a Spin" button.
 
-Demo Gif Link: http://giphy.com/gifs/xT0BKs42kdYZTkeL0k
+Demo Gif Link: https://github.com/muditmittal/Carousel/blob/master/Carousel_Demo.gif
 
 ![Carousel Demo] (https://github.com/muditmittal/Carousel/blob/master/Carousel_Demo.gif)
 
